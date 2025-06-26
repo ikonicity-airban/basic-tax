@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 const Information: React.FC<Partial<FormProps>> = ({ register, errors }) => {
   return (
     <Card className="form-section overflow-hidden">
-      <div className="bg-gradient-to-r from-oyadrop/10 to-transparent px-6 py-4">
+      <div className="bg-linear-to-r from-oyadrop/10 to-transparent px-6 py-4">
         <h2 className="text-lg font-semibold flex items-center">
           <Badge
             variant="outline"

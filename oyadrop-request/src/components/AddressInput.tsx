@@ -263,7 +263,7 @@ const AddressInput = ({
           variant="outline"
           size="icon"
           onClick={() => setShowMapDialog(true)}
-          className="flex-shrink-0"
+          className="shrink-0"
         >
           <Map className="h-4 w-4" />
         </Button>

@@ -96,7 +96,7 @@ function Multiform() {
                 key={step.id}
                 className={cn(
                   "flex items-center w-full -space-x-2",
-                  index !== steps.length - 2 && "flex-grow"
+                  index !== steps.length - 2 && "grow"
                 )}
               >
                 <button

@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 const Header = () => {
   return (
     <Card className="mb-8 glass shadow-glass-lg overflow-hidden border-0 max-sm:rounded-t-none max-sm:rounded-b-[25%] relative">
-      <div className="bg-gradient-to-br from-oyadrop-light to-oyadrop px-6 py-8 text-white">
+      <div className="bg-linear-to-br from-oyadrop-light to-oyadrop px-6 py-8 text-white">
         <div className="flex flex-col items-center">
           <div className="w-32 mb-4 opacity-90">
             <img
