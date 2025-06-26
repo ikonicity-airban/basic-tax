@@ -1,5 +1,5 @@
-import { toast } from "sonner";
 import { createEmailTemplate } from "./createEmailTemplate";
+import { toast } from "sonner";
 
 // Declare EmailJS types
 declare global {
@@ -24,14 +24,14 @@ interface DeliveryFormData {
   pickupDateTime: Date | null;
 
   // Dropoff details
-  dropoffName: string;
-  dropoffAddress: string;
-  dropoffPhone: string;
-  dropoffDateTime: Date | null;
+  dropOffName: string;
+  dropOffAddress: string;
+  dropOffPhone: string;
+  dropOffDateTime: Date | null;
   itemQuantity: string;
   itemImage?: File | string | null;
 
-  // Additional dropoffs (if any)
+  // Additional dropOffs (if any)
   additionalDropoffs?: Array<{
     name: string;
     address: string;
@@ -52,7 +52,7 @@ interface DeliveryFormData {
   // Coordinates for distance calculation
   coordinates: {
     pickup: [number, number] | null;
-    dropoff: [number, number] | null;
+    dropOff: [number, number] | null;
   };
 }
 
@@ -96,11 +96,11 @@ export async function sendDeliveryRequest(
 
     if (formData.additionalDropoffs?.length) {
       processedData.additionalDropoffs = await Promise.all(
-        formData.additionalDropoffs.map(async (dropoff) => ({
-          ...dropoff,
+        formData.additionalDropoffs.map(async (dropOff) => ({
+          ...dropOff,
           itemImage:
-            dropoff.itemImage instanceof File
-              ? await convertFileToBase64(dropoff.itemImage)
+            dropOff.itemImage instanceof File
+              ? await convertFileToBase64(dropOff.itemImage)
               : null,
         }))
       );

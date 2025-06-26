@@ -106,7 +106,7 @@ export const createEmailTemplate = (data: any) => /* HTML */ `
               </td>
               <td style="padding: 8px 0;">
                 <strong style="color: hsl(240, 10%, 3.9%);"
-                  >${data.dropoffName}</strong
+                  >${data.dropOffName}</strong
                 >
               </td>
             </tr>
@@ -116,7 +116,7 @@ export const createEmailTemplate = (data: any) => /* HTML */ `
               </td>
               <td style="padding: 8px 0;">
                 <strong style="color: hsl(240, 10%, 3.9%);"
-                  >${data.dropoffPhone}</strong
+                  >${data.dropOffPhone}</strong
                 >
               </td>
             </tr>
@@ -126,7 +126,7 @@ export const createEmailTemplate = (data: any) => /* HTML */ `
               </td>
               <td style="padding: 8px 0;">
                 <strong style="color: hsl(240, 10%, 3.9%);"
-                  >${data.dropoffAddress}</strong
+                  >${data.dropOffAddress}</strong
                 >
               </td>
             </tr>
@@ -166,7 +166,7 @@ export const createEmailTemplate = (data: any) => /* HTML */ `
           <h3 style="margin: 0 0 15px; color: hsl(160, 84%, 39%); font-size: 18px;">📦 Additional Dropoffs</h3>
           ${data.additionalDropoffs
             .map(
-              (dropoff: any, index: number) => `
+              (dropOff: any, index: number) => `
           <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed hsl(240, 4.8%, 95.9%);">
             <h4 style="margin: 0 0 10px; color: hsl(240, 10%, 3.9%);">Dropoff #${
               index + 1
@@ -175,33 +175,33 @@ export const createEmailTemplate = (data: any) => /* HTML */ `
               <tr>
                 <td style="padding: 8px 0; color: hsl(240, 3.8%, 46.1%); width: 120px;">Name:</td>
                 <td style="padding: 8px 0;"><strong style="color: hsl(240, 10%, 3.9%);">${
-                  dropoff.name
+                  dropOff.name
                 }</strong></td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; color: hsl(240, 3.8%, 46.1%);">Phone:</td>
                 <td style="padding: 8px 0;"><strong style="color: hsl(240, 10%, 3.9%);">${
-                  dropoff.phone
+                  dropOff.phone
                 }</strong></td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; color: hsl(240, 3.8%, 46.1%);">Address:</td>
                 <td style="padding: 8px 0;"><strong style="color: hsl(240, 10%, 3.9%);">${
-                  dropoff.address
+                  dropOff.address
                 }</strong></td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; color: hsl(240, 3.8%, 46.1%);">Quantity:</td>
                 <td style="padding: 8px 0;"><strong style="color: hsl(240, 10%, 3.9%);">${
-                  dropoff.itemQuantity
+                  dropOff.itemQuantity
                 }</strong></td>
               </tr>
             </table>
             ${
-              dropoff.itemImage
+              dropOff.itemImage
                 ? `
             <div style="margin-top: 15px;">
-              <img src="${dropoff.itemImage}" alt="Additional Item Image ${
+              <img src="${dropOff.itemImage}" alt="Additional Item Image ${
                     index + 1
                   }" style="max-width: 200px; border-radius: 4px; border: 1px solid hsl(240, 4.8%, 95.9%);">
             </div>

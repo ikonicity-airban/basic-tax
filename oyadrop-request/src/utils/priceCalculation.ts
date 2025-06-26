@@ -1,6 +1,6 @@
 interface Coordinates {
   pickup: [number, number] | null;
-  dropoff: [number, number] | null;
+  dropOff: [number, number] | null;
 }
 
 /**
@@ -31,23 +31,23 @@ function deg2rad(deg: number): number {
 }
 
 /**
- * Estimates the price based on the distance between pickup and dropoff locations
+ * Estimates the price based on the distance between pickup and dropOff locations
  * This is a simplified pricing model that can be adjusted based on actual business needs
  */
 export function estimatePrice(coordinates: Coordinates): number | null {
-  if (!coordinates.pickup || !coordinates.dropoff) {
+  if (!coordinates.pickup || !coordinates.dropOff) {
     return null;
   }
 
   const [pickupLon, pickupLat] = coordinates.pickup;
-  const [dropoffLon, dropoffLat] = coordinates.dropoff;
+  const [dropOffLon, dropOffLat] = coordinates.dropOff;
 
   // Calculate distance
   const distance = calculateDistance(
     pickupLat,
     pickupLon,
-    dropoffLat,
-    dropoffLon
+    dropOffLat,
+    dropOffLon
   );
 
   // Base fare in Nigerian Naira
